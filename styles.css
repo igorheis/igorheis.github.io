@@ -17,3 +17,30 @@
 .project-tech span{font-size:9px;color:#72818a;background:#edf2f4;padding:4px 7px;border-radius:3px}
 .project-tech span:first-child{color:var(--blue);font-weight:700}
 @media(max-width:620px){.approach-flow{gap:6px}.approach-flow span{font-size:9px}.hero-actions .button{gap:12px;padding:12px 13px}.timeline-item>p:not(.company){font-size:11px}}
+
+/* Formação: disclosure interativo, acessível por mouse e teclado. */
+.education-card{min-height:0;padding:0}
+.education-summary{display:flex;align-items:center;gap:18px;min-height:142px;padding:24px 28px;cursor:pointer;list-style:none;transition:background .2s ease}
+.education-summary::-webkit-details-marker{display:none}
+.education-summary::marker{content:""}
+.education-summary:hover{background:#fbfcfc}
+.education-mark{flex:none;width:44px;height:44px;border-radius:50%;background:#edf3f5;color:var(--blue);display:grid;place-items:center;font-size:19px}
+.education-title-block{display:block;min-width:0}
+.education-title-block .card-index{display:block}
+.education-title-block .education-title{display:block;font:600 24px/1.25 var(--serif);letter-spacing:-.045em;color:var(--ink);margin-top:8px}
+.education-title-block .education-degree{display:block;font-size:12px;color:var(--muted);margin-top:5px}
+.education-chevron{flex:none;width:11px;height:11px;margin-left:auto;margin-right:5px;border-top:1.5px solid var(--blue);border-right:1.5px solid var(--blue);transform:rotate(45deg);transition:transform .25s ease}
+.education-card[open]>.education-summary .education-chevron{transform:rotate(135deg)}
+.education-panel{display:grid;grid-template-rows:0fr;visibility:hidden;transition:grid-template-rows .32s ease,visibility .32s ease}
+.education-card[open]>.education-panel{grid-template-rows:1fr;visibility:visible}
+.education-panel-inner{min-height:0;overflow:hidden;opacity:0;transform:translateY(-5px);transition:opacity .24s ease,transform .24s ease}.education-panel-content{padding:0 28px 26px 90px}
+.education-card[open]>.education-panel .education-panel-inner{opacity:1;transform:translateY(0)}
+.education-context{font-size:11px;color:#82919a;margin:0 0 17px}
+.education-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.education-topic{padding:14px;background:#f5f7f8;border:1px solid #edf0f2;border-radius:4px}
+.education-topic h4{font:700 10px/1.4 var(--sans);letter-spacing:.05em;color:var(--blue);margin:0 0 10px}
+.education-tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;padding:0;margin:0}
+.education-tags li{font:400 10px/1.4 var(--sans);color:#596873;background:#fff;border:1px solid #e5eaed;border-radius:3px;padding:4px 7px}
+.education-card>.card-line{pointer-events:none}
+@media(max-width:620px){.education-summary{min-height:120px;padding:20px 17px;gap:12px}.education-mark{width:38px;height:38px}.education-title-block .education-title{font-size:19px}.education-title-block .education-degree{font-size:11px}.education-panel-content{padding:0 17px 20px}.education-topic-grid{grid-template-columns:1fr;gap:9px}.education-topic{padding:12px}.education-context{line-height:1.6}}
+@media(prefers-reduced-motion:reduce){.education-summary,.education-chevron,.education-panel,.education-panel-inner{transition:none}}
