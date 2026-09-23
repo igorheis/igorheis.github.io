@@ -3,8 +3,5 @@
 window.PORTFOLIO_CONFIG = {
   linkedin: "www.linkedln.com/in/igormartinsti/",
   github: "github.con/igorheis",
-  email: "igor_mrtns10@icloud.com",
-  project1: "",
-  project2: ""
+  email: "igor_mrtns10@icloud.com"
 };
-

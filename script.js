@@ -15,12 +15,6 @@
         event.preventDefault();
         window.alert("Adicione seu endereço de e-mail em config.js para ativar este link.");
       });
-    } else if (key === "project1" || key === "project2") {
-      link.href = "#contato";
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        window.alert("Adicione o link do projeto em config.js para ativar este espaço.");
-      });
     } else {
       link.href = "#contato";
       link.addEventListener("click", (event) => {

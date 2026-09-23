@@ -14,7 +14,7 @@ Depois acesse <http://localhost:8000>.
 
 ## Personalizar links
 
-Edite `config.js` e preencha `linkedin`, `github` e `email`. Esses três campos são os únicos dados pessoais ainda ausentes. Os cards na seção Projetos são placeholders identificados; ao substituí-los por projetos reais, atualize nome, descrição, tecnologias e link para o repositório nos respectivos cards do `index.html`, e configure `project1` e `project2` em `config.js`.
+Os links de LinkedIn, GitHub e e-mail ficam centralizados em `config.js` para facilitar a atualização.
 
 ## Publicar no GitHub Pages
 
