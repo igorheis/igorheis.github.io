@@ -25,7 +25,7 @@
       link.href = "#contato";
       link.addEventListener("click", (event) => {
         event.preventDefault();
-        window.alert(`Adicione seu link de ${key === "github" ? "GitHub" : "LinkedIn"} em config.js para ativar este botão.");
+        window.alert(`Adicione seu link de ${key === "github" ? "GitHub" : "LinkedIn"} em config.js para ativar este botão.`);
       });
     }
   });
@@ -52,7 +52,15 @@
         observer.unobserve(entry.target);
       }
     }), { threshold: 0.12 });
-    document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    const revealElements = document.querySelectorAll(".reveal");
+    revealElements.forEach((element) => observer.observe(element));
+    // Progressive enhancement: only hide reveal elements after observation is active.
+    document.documentElement.classList.add("js");
+    // Safety net in case the observer is interrupted; no content stays hidden.
+    window.setTimeout(() => {
+      revealElements.forEach((element) => element.classList.add("is-visible"));
+      observer.disconnect();
+    }, 1800);
   } else {
     document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
   }
