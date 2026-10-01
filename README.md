@@ -12,5 +12,4 @@ python3 -m http.server 8000
 
 Depois acesse <http://localhost:8000>.
 
-## Personalizar links
 
